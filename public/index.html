@@ -1,0 +1,29 @@
+<!--
+ * @Author: zhaozhuo
+ * @Date: 2022-07-08 10:03:56
+ * @LastEditors: zhaozhuo
+ * @LastEditTime: 2022-07-15 11:17:22
+ * @Description: ...
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <% if (process.env.VUE_APP_DEV_STATE === 'devproduction' ) { %>
+      <script src="http://eruda.liriliri.io/eruda.min.js"></script>
+      <script>
+        eruda.init();
+      </script>
+    <% } %>
+  </body>
+</html>
